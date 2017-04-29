@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<style>
+    #header .ads{
+        width:100%;
+        margin-top:25px;
+    }
+    /* js kullandigim icin css class i geciyorum.
+    /*
+    @media screen and (max-width:768px) {
+        .rm_iframe {
+            width: 50% !important;
+        }
+    }
+*/
+</style>
+<div class="ads">
+    <!-- ReklamStore kodu basla - 728x90 -->
+    <script type="text/javascript">
+        var reklamstore_region_id = 494498;
+    </script>
+    <script type="text/javascript" src="//adserver.reklamstore.com/reklamstore.js"></script>
+    <!-- ReklamStore kodu bitti - 728x90-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $( window ).resize(function() {
+                var size=$(window).width();
+                    if(size<728) {
+                        $('.rm_iframe').attr('style','width:'+size+'px');
+                    }
+                    else {
+                        $('.rm_iframe').attr('style','width:728px');
+                    }
+            });
+        });
+    </script>
+</div>
+</body>
+</html>
