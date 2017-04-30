@@ -103,7 +103,7 @@ function init_banner() {
             });
         });
     </script>
-<?
+<?php
 }
 add_action('wp_footer','init_banner');
 ?>
